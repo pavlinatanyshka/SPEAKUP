@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="SPEAK UP! — разговорный клуб английского языка для студентов ПГНИУ. Общайся, играй, знакомься и практикуй английский. Первая встреча 30 января 2027 в 16:30.">
+<meta name="theme-color" content="#242B49">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SPEAK UP! Разговорный клуб ПГНИУ">
+<meta property="og:description" content="SPEAK UP! — разговорный клуб английского языка для студентов ПГНИУ. Общайся, играй, знакомься и практикуй английский. Первая встреча 30 января 2027 в 16:30.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23242B49'/%3E%3Ctext x='32' y='44' font-size='34' font-weight='900' text-anchor='middle' fill='%23B8ED65' font-family='Arial Black,Arial,sans-serif'%3ES!%3C/text%3E%3C/svg%3E">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>SPEAK UP! Разговорный клуб ПГНИУ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Onest:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap">
+<style>
+/* Layout: editorial youth landing. Full-width colour bands, giant Unbounded type,
+   speech-bubble stickers and photos with offset colour shadows. One loud moment (hero title), the rest calm. */
+:root {
+  --navy: #242B49;
+  --navy-2: #323B63;
+  --navy-deep: #1B2140;
+  --lime: #B8ED65;
+  --pink: #FFB8C9;
+  --cream: #FFF4DF;
+  --cream-2: #FBE7C0;
+  --soft: #4A5173;
+  --soft-on-dark: #CDD1E6;
+  --focus: #242B49;
+  --f-display: "Unbounded", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Onest", "Segoe UI", Roboto, Arial, sans-serif;
+  --f-hand: "Caveat", "Segoe Print", "Comic Sans MS", cursive;
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--navy);
+  font-family: var(--f-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 40; background: var(--navy);
+}
+main { overflow-x: clip; }
+img { display: block; }
+h1, h2, h3, p, ul, ol, figure, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+h2, h3 { font-family: var(--f-display); font-weight: 800; line-height: 1.1; text-wrap: balance; overflow-wrap: break-word; }
+h2 { font-size: clamp(1.6rem, 5.6vw, 3.2rem); letter-spacing: -.02em; }
+h3 { font-size: clamp(1.1rem, 2.6vw, 1.45rem); letter-spacing: -.01em; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.on-dark { --focus: var(--pink); }
+
+.wrap {
+  max-width: 1192px; margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.band { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.band-navy { background: var(--navy); color: var(--cream); }
+.band-pink { background: var(--pink); }
+.band-lime { background: var(--lime); }
+.band-cream2 { background: var(--cream-2); }
+[id] { scroll-margin-top: 84px; }
+
+/* ---------- small pieces ---------- */
+.tag {
+  display: inline-block; align-self: flex-start;
+  font-family: var(--f-display); font-weight: 700; font-size: .72rem; letter-spacing: .08em;
+  text-transform: uppercase;
+  background: var(--lime); color: var(--navy);
+  padding: .5em 1em; border-radius: 999px; transform: rotate(-2deg);
+}
+.tag.pink { background: var(--pink); }
+.tag.navy { background: var(--navy); color: var(--cream); }
+.sec-head { display: flex; flex-direction: column; gap: 1.1rem; margin-bottom: clamp(2rem, 5vw, 3.2rem); max-width: 46rem; }
+.sec-head p { font-size: 1.15rem; max-width: 38rem; }
+.muted { color: var(--soft); }
+.band-navy .muted { color: var(--soft-on-dark); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+  font: 700 1.05rem/1.2 var(--f-body);
+  background: var(--lime); color: var(--navy);
+  border: 0; border-radius: 999px; padding: 1em 1.7em; cursor: pointer; text-decoration: none;
+  box-shadow: 5px 5px 0 var(--pink);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.btn:hover { transform: translate(-2px, -2px) rotate(-1deg); box-shadow: 8px 8px 0 var(--pink); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--pink); }
+.btn.on-cream { background: var(--navy); color: var(--cream); box-shadow: 5px 5px 0 var(--lime); }
+.btn.on-cream:hover { box-shadow: 8px 8px 0 var(--lime); }
+.btn.small { padding: .7em 1.2em; font-size: .95rem; box-shadow: 3px 3px 0 var(--pink); }
+.btn[disabled] { opacity: .6; cursor: progress; }
+
+.bubble {
+  position: relative; display: inline-block; max-width: 100%;
+  background: var(--lime); color: var(--navy);
+  font-weight: 700; line-height: 1.25;
+  padding: .7em 1.1em; border-radius: 1.3em 1.3em 1.3em .3em;
+}
+.bubble.pink { background: var(--pink); }
+.bubble.cream { background: var(--cream); }
+.bubble.right { border-radius: 1.3em 1.3em .3em 1.3em; }
+
+/* ---------- header ---------- */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30;
+  background: var(--navy); color: var(--cream);
+  border-bottom: 1px solid rgba(255, 244, 223, .14);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .7rem; }
+.logo { font-family: var(--f-display); font-weight: 900; font-size: 1.15rem; color: var(--lime); text-decoration: none; letter-spacing: -.02em; white-space: nowrap; }
+.nav { display: none; gap: 1.6rem; }
+.nav a { color: var(--cream); text-decoration: none; font-weight: 500; font-size: .98rem; }
+.nav a:hover { color: var(--lime); }
+@media (min-width: 900px) { .nav { display: flex; } }
+
+/* ---------- hero ---------- */
+.hero {
+  background-color: var(--navy); color: var(--cream);
+  background-image: radial-gradient(rgba(255, 244, 223, .09) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  padding-block: clamp(2rem, 5vw, 3.6rem) clamp(3rem, 7vw, 5.5rem);
+}
+.hero .wrap { display: flex; flex-direction: column; gap: clamp(1.4rem, 3vw, 2.2rem); }
+.mega {
+  font-family: var(--f-display); font-weight: 900; font-size: clamp(2.6rem, 13.5vw, 10rem);
+  line-height: .95; letter-spacing: -.03em; color: var(--lime);
+  text-shadow: .045em .045em 0 var(--pink);
+  white-space: nowrap;
+}
+.mega span { display: inline-block; animation: drop .9s var(--ease) both; animation-delay: calc(var(--i) * 70ms + 150ms); }
+.mega .sp { width: .28em; }
+@keyframes drop { from { transform: translateY(-.7em) rotate(-8deg); opacity: 0; } to { transform: none; opacity: 1; } }
+.hero-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+@media (min-width: 900px) { .hero-grid { grid-template-columns: 1.15fr .85fr; } }
+.hero-text { display: flex; flex-direction: column; gap: 1.4rem; align-items: flex-start; min-width: 0; }
+.lead { font-family: var(--f-display); font-weight: 700; font-size: clamp(1.35rem, 3.6vw, 2.2rem); line-height: 1.2; letter-spacing: -.015em; text-wrap: balance; }
+.hero-text .sub { font-size: 1.15rem; color: var(--soft-on-dark); max-width: 34rem; }
+.facts { display: flex; flex-wrap: wrap; gap: .6rem; }
+.facts li { background: rgba(255, 244, 223, .1); border: 2px solid rgba(255, 244, 223, .35); border-radius: 999px; padding: .45em 1em; font-weight: 600; }
+.facts li b { color: var(--lime); font-weight: 700; }
+
+.hero-photo { position: relative; justify-self: center; width: min(100%, 440px); padding: 0 14px 14px 0; }
+.hero-photo .frame { position: relative; transform: rotate(2.2deg); box-shadow: 14px 14px 0 var(--pink); border: 6px solid var(--cream); background: var(--cream); }
+.hero-photo img { width: 100%; height: auto; aspect-ratio: 4 / 4.6; object-fit: cover; object-position: 50% 60%; }
+.hero-photo .bubble { position: absolute; z-index: 2; font-size: 1.05rem; animation: floaty 5s ease-in-out infinite; }
+.hero-photo .b1 { top: -1.1rem; left: -.4rem; }
+.hero-photo .b2 { bottom: 1.4rem; right: -.2rem; background: var(--pink); animation-delay: -2.2s; }
+@keyframes floaty { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-10px) rotate(2deg); } }
+.spin { position: absolute; z-index: 3; left: -1.2rem; bottom: -1.6rem; width: 112px; height: 112px; }
+.spin svg { width: 100%; height: 100%; animation: spin 16s linear infinite; }
+.spin .disc { position: absolute; inset: 22%; background: var(--lime); border-radius: 50%; display: grid; place-items: center; color: var(--navy); font-family: var(--f-display); font-weight: 900; font-size: 1.1rem; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- marquee ---------- */
+.marq { background: var(--pink); color: var(--navy); overflow: hidden; border-block: 3px solid var(--navy); }
+.marq-track { display: flex; width: max-content; animation: marq 26s linear infinite; }
+.marq:hover .marq-track { animation-play-state: paused; }
+.marq-group { display: flex; align-items: center; gap: 1.6rem; padding: .9rem 1.6rem .9rem 0; font-family: var(--f-display); font-weight: 800; font-size: clamp(1.3rem, 3.6vw, 2.2rem); white-space: nowrap; }
+.marq-group svg { width: 1.1em; height: 1.1em; flex: none; animation: spin 8s linear infinite; }
+@keyframes marq { to { transform: translateX(-50%); } }
+
+/* ---------- reveal (content stays visible; only a small offset) ---------- */
+.rv { transition: transform .8s var(--ease); }
+.js .rv:not(.in) { transform: translateY(26px); }
+
+/* ---------- about ---------- */
+.about-grid { display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+@media (min-width: 900px) { .about-grid { grid-template-columns: 1.1fr .9fr; } }
+.about-text { display: flex; flex-direction: column; gap: 1.2rem; min-width: 0; }
+.about-text p { max-width: 36rem; }
+.about-text .punch { font-family: var(--f-display); font-weight: 700; font-size: 1.2rem; line-height: 1.3; background: var(--lime); padding: .8em 1em; border-radius: .9em; transform: rotate(-1deg); align-self: flex-start; }
+.scene { position: relative; display: flex; flex-direction: column; gap: 1.6rem; align-items: stretch; min-width: 0; }
+.words { display: flex; flex-direction: column; gap: .6rem; align-items: flex-start; }
+.word { font-family: var(--f-display); font-weight: 900; font-size: clamp(2rem, 7.5vw, 3.6rem); line-height: 1; padding: .18em .45em; border-radius: .35em; letter-spacing: -.02em; animation: wob 6s ease-in-out infinite; }
+.word.w1 { background: var(--lime); transform: rotate(-3deg); }
+.word.w2 { background: var(--pink); margin-left: 12%; animation-delay: -2s; }
+.word.w3 { background: var(--navy); color: var(--cream); margin-left: 4%; animation-delay: -4s; }
+@keyframes wob { 0%, 100% { rotate: -1.5deg; } 50% { rotate: 1.5deg; } }
+.talkers { display: flex; justify-content: space-around; align-items: flex-end; gap: .5rem; border-top: 3px dashed var(--navy); padding-top: 1.4rem; }
+.talker { position: relative; width: min(30%, 130px); display: flex; flex-direction: column; align-items: center; gap: .6rem; }
+.talker .bubble { font-size: .85rem; padding: .55em .8em; position: absolute; bottom: calc(100% - .2rem); animation: floaty 5s ease-in-out infinite; white-space: nowrap; }
+.talker:nth-child(1) .bubble { left: -6%; }
+.talker:nth-child(2) .bubble { background: var(--pink); animation-delay: -1.5s; }
+.talker:nth-child(3) .bubble { right: -6%; background: var(--navy); color: var(--cream); animation-delay: -3s; }
+.talker svg { width: 100%; height: auto; animation: bob 3.4s ease-in-out infinite; }
+.talker:nth-child(2) svg { animation-delay: -1.1s; }
+.talker:nth-child(3) svg { animation-delay: -2.2s; }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.dots { display: inline-flex; gap: .25em; align-items: center; height: 1em; }
+.dots i { width: .45em; height: .45em; border-radius: 50%; background: currentColor; animation: dot 1.2s infinite; }
+.dots i:nth-child(2) { animation-delay: .2s; }
+.dots i:nth-child(3) { animation-delay: .4s; }
+@keyframes dot { 0%, 60%, 100% { opacity: .3; transform: none; } 30% { opacity: 1; transform: translateY(-.25em); } }
+
+/* ---------- what we do ---------- */
+.cards4 { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .cards4 { grid-template-columns: 1fr 1fr; } }
+.fcard { display: flex; flex-direction: column; border-radius: 1.4rem; overflow: hidden; min-width: 0; border: 3px solid var(--navy); transition: transform .35s var(--ease); }
+.fcard:hover { transform: rotate(-.8deg) translateY(-5px); }
+.fcard .ph { height: 230px; overflow: hidden; border-bottom: 3px solid var(--navy); }
+.fcard .ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; transition: transform .8s var(--ease); }
+.fcard:hover .ph img { transform: scale(1.06); }
+.fcard .body { padding: 1.5rem 1.5rem 1.7rem; display: flex; flex-direction: column; gap: .7rem; }
+.fcard.c-lime { background: var(--lime); }
+.fcard.c-pink { background: var(--pink); }
+.fcard.c-cream { background: var(--cream); }
+.fcard.c-navy { background: var(--navy); color: var(--cream); }
+.fcard .big { font-family: var(--f-display); font-weight: 900; font-size: clamp(2.4rem, 6vw, 3.4rem); line-height: 1; opacity: .16; margin-bottom: -.4rem; }
+
+/* ---------- topics ---------- */
+.topics { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .topics { grid-template-columns: 1fr 1fr; } }
+.topic { background: var(--navy-2); border-radius: 1.4rem; overflow: hidden; display: flex; flex-direction: column; min-width: 0; border: 2px solid rgba(255, 244, 223, .2); transition: transform .35s var(--ease), border-color .35s; }
+.topic:hover { transform: translateY(-5px); border-color: var(--lime); }
+.topic .ph { height: 210px; }
+.topic .ph img { width: 100%; height: 100%; object-fit: cover; }
+.topic .ph.cinema img { object-position: 50% 45%; }
+.topic .ph.lib img { object-position: 50% 70%; }
+.topic .body { padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; gap: .8rem; }
+.topic .theme { font-family: var(--f-display); font-weight: 800; font-size: 1.6rem; color: var(--lime); letter-spacing: -.01em; line-height: 1.1; }
+.topic .theme small { display: block; font-family: var(--f-body); font-weight: 600; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; color: var(--pink); margin-bottom: .4rem; }
+.topic p { color: var(--soft-on-dark); }
+
+/* ---------- why ---------- */
+.why { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .why { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .why { grid-template-columns: repeat(4, 1fr); } }
+.why li { position: relative; background: var(--cream-2); border-radius: 1.4rem; padding: 3.6rem 1.4rem 1.6rem; display: flex; flex-direction: column; gap: .6rem; min-width: 0; }
+.why .note { position: absolute; top: .9rem; left: 1.2rem; font-family: var(--f-hand); font-weight: 700; font-size: 1.7rem; line-height: 1; padding: .12em .55em .2em; border-radius: .5em; color: var(--navy); background: var(--lime); transform: rotate(-4deg); }
+.why li:nth-child(2) .note { background: var(--pink); transform: rotate(3deg); }
+.why li:nth-child(3) .note { background: var(--navy); color: var(--cream); transform: rotate(-2deg); }
+.why li:nth-child(4) .note { background: var(--lime); transform: rotate(4deg); }
+.why li:hover .note { animation: wiggle .5s; }
+@keyframes wiggle { 25% { rotate: -8deg; } 75% { rotate: 8deg; } }
+
+/* ---------- who ---------- */
+.who { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+@media (min-width: 800px) { .who { grid-template-columns: repeat(3, 1fr); } }
+.who li { background: var(--cream); border: 3px solid var(--navy); border-radius: 1.4rem; padding: 1.5rem; display: flex; flex-direction: column; gap: .6rem; min-width: 0; transition: transform .35s var(--ease); }
+.who li:hover { transform: rotate(1deg) translateY(-4px); }
+.who .badge { width: 3rem; height: 3rem; border-radius: 50%; background: var(--pink); border: 3px solid var(--navy); display: grid; place-items: center; font-family: var(--f-display); font-weight: 900; }
+.who li:nth-child(2) .badge { background: var(--lime); border-radius: 30% 70% 60% 40% / 40% 40% 60% 60%; }
+.who li:nth-child(3) .badge { background: var(--navy); color: var(--cream); border-radius: .8rem; }
+.callout { margin-top: 2rem; display: flex; }
+.callout .bubble { font-size: 1.15rem; padding: 1em 1.4em; background: var(--navy); color: var(--cream); font-weight: 600; }
+
+/* ---------- real life ---------- */
+.phrases { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+@media (min-width: 800px) { .phrases { grid-template-columns: repeat(3, 1fr); } }
+.phrase { background: var(--navy-2); border: 2px solid rgba(255, 244, 223, .2); border-radius: 1.4rem; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; min-width: 0; align-items: flex-start; }
+.phrase h3 { font-size: clamp(1.7rem, 4.4vw, 2.2rem); color: var(--lime); text-shadow: 3px 3px 0 var(--navy-deep); }
+.chat { display: flex; flex-direction: column; gap: .5rem; width: 100%; }
+.chat .bubble { font-size: .98rem; font-weight: 600; align-self: flex-start; }
+.chat .bubble.right { align-self: flex-end; }
+.meaning { background: var(--cream); color: var(--navy); border-radius: .9rem; padding: .8em 1em; font-weight: 700; width: 100%; animation: pop .45s var(--ease); }
+@keyframes pop { from { transform: scale(.85) rotate(-3deg); opacity: 0; } to { transform: none; opacity: 1; } }
+.reveal-btn { font: 700 .95rem var(--f-body); color: var(--navy); background: var(--pink); border: 0; border-radius: 999px; padding: .65em 1.2em; cursor: pointer; transition: transform .2s var(--ease); }
+.reveal-btn:hover { transform: rotate(-2deg) scale(1.04); }
+.after-note { margin-top: 2rem; max-width: 40rem; font-size: 1.15rem; }
+
+/* ---------- quiz ---------- */
+.quiz { background: var(--cream); border: 3px solid var(--navy); border-radius: 1.6rem; padding: clamp(1.2rem, 4vw, 2.4rem); box-shadow: 10px 10px 0 var(--navy); display: flex; flex-direction: column; gap: 1.8rem; }
+.q { border: 0; padding: 0; margin: 0; min-width: 0; display: flex; flex-direction: column; gap: .8rem; }
+.q legend { padding: 0; font-weight: 700; font-size: 1.15rem; line-height: 1.35; margin-bottom: .6rem; }
+.q legend span { font-family: var(--f-display); font-weight: 800; background: var(--lime); border-radius: .4em; padding: .05em .45em; margin-right: .4em; white-space: nowrap; }
+.opt { position: relative; display: flex; align-items: center; gap: .8rem; background: #fff; border: 2.5px solid var(--navy); border-radius: .9rem; padding: .8em 1em; cursor: pointer; transition: transform .2s var(--ease), background .2s; }
+.opt:hover { transform: translateX(4px); background: var(--cream-2); }
+.opt input { position: absolute; opacity: 0; pointer-events: none; }
+.opt .dot { flex: none; width: 1.3rem; height: 1.3rem; border-radius: 50%; border: 2.5px solid var(--navy); background: #fff; display: grid; place-items: center; }
+.opt input:checked + .dot { background: var(--navy); box-shadow: inset 0 0 0 3px #fff; }
+.opt:has(input:checked) { background: var(--pink); }
+.opt:has(input:focus-visible) { outline: 3px solid var(--navy); outline-offset: 3px; }
+.opt .mark { margin-left: auto; font-weight: 700; font-size: .85rem; white-space: nowrap; }
+.opt.ok { background: var(--lime); }
+.opt.bad { background: #fff; border-style: dashed; }
+.fb { font-weight: 600; min-height: 0; }
+.quiz-actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+.status { font-weight: 600; }
+.result { background: var(--navy); color: var(--cream); border-radius: 1.2rem; padding: 1.4rem 1.5rem; display: flex; flex-direction: column; gap: .9rem; align-items: flex-start; animation: pop .5s var(--ease); }
+.result .score { font-family: var(--f-display); font-weight: 900; font-size: clamp(1.5rem, 5vw, 2.2rem); color: var(--lime); line-height: 1.1; }
+
+/* ---------- team ---------- */
+.team { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .team { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .team { grid-template-columns: repeat(3, 1fr); } }
+.member { display: flex; gap: 1rem; align-items: flex-start; background: var(--cream-2); border-radius: 1.4rem; padding: 1.3rem; min-width: 0; transition: transform .35s var(--ease); }
+.member:hover { transform: rotate(-1deg) translateY(-4px); }
+.ava { flex: none; width: 3.6rem; height: 3.6rem; border-radius: 50%; display: grid; place-items: center; font-family: var(--f-display); font-weight: 800; font-size: 1.05rem; border: 3px solid var(--navy); background: var(--pink); }
+.member:nth-child(3n+2) .ava { background: var(--lime); }
+.member:nth-child(3n) .ava { background: var(--navy); color: var(--cream); }
+.member h3 { font-size: 1.05rem; margin-bottom: .4rem; }
+.member p { font-size: .96rem; line-height: 1.45; }
+.member .course { display: inline-block; margin-top: .5rem; font-weight: 700; font-size: .85rem; background: var(--cream); border-radius: 999px; padding: .15em .8em; }
+
+/* ---------- join ---------- */
+.join-grid { display: grid; gap: clamp(2rem, 5vw, 3.5rem); align-items: start; }
+@media (min-width: 960px) { .join-grid { grid-template-columns: 1fr 1fr; } }
+.join-left { display: flex; flex-direction: column; gap: 1.6rem; min-width: 0; }
+.join-left .big { font-family: var(--f-display); font-weight: 900; font-size: clamp(2.1rem, 8vw, 4rem); line-height: 1; letter-spacing: -.03em; color: var(--lime); text-shadow: .05em .05em 0 var(--pink); }
+.meet { background: var(--lime); color: var(--navy); border-radius: 1.4rem; padding: 1.3rem 1.5rem; display: flex; flex-direction: column; gap: .3rem; transform: rotate(-1.2deg); align-self: flex-start; max-width: 100%; }
+.meet .when { font-family: var(--f-display); font-weight: 900; font-size: clamp(1.4rem, 4.5vw, 2rem); line-height: 1.1; }
+.meet .where { font-weight: 600; }
+.steps { display: flex; flex-direction: column; gap: 1rem; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; }
+.steps li::before { content: counter(s); font-family: var(--f-display); font-weight: 900; width: 2.6rem; height: 2.6rem; border-radius: 50%; display: grid; place-items: center; background: var(--pink); color: var(--navy); }
+.steps b { display: block; font-size: 1.1rem; }
+.steps span { color: var(--soft-on-dark); }
+.formcard { background: var(--cream); color: var(--navy); border-radius: 1.6rem; padding: clamp(1.3rem, 4vw, 2.2rem); box-shadow: 10px 10px 0 var(--pink); display: flex; flex-direction: column; gap: 1.1rem; min-width: 0; }
+.formcard h3 { font-size: clamp(1.3rem, 3.4vw, 1.7rem); }
+.field { display: flex; flex-direction: column; gap: .4rem; min-width: 0; }
+.field label, .field .lbl { font-weight: 700; font-size: .98rem; }
+.field label small { font-weight: 500; color: var(--soft); }
+.field input[type=text], .field select { font: 500 1rem var(--f-body); color: var(--navy); background: #fff; border: 2.5px solid var(--navy); border-radius: .8rem; padding: .8em 1em; width: 100%; min-width: 0; }
+.field input:focus-visible, .field select:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; background: #fff; }
+.consent { display: flex; gap: .7rem; align-items: flex-start; font-size: .92rem; line-height: 1.45; }
+.consent input { width: 1.25rem; height: 1.25rem; margin-top: .15rem; flex: none; accent-color: var(--navy); }
+.formmsg { font-weight: 600; }
+.hint { font-size: .92rem; color: var(--soft); }
+.hint a { color: var(--navy); font-weight: 700; }
+.formmsg.err { background: var(--pink); border-radius: .9rem; padding: .9em 1em; }
+.thanks { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+.thanks .big2 { font-family: var(--f-display); font-weight: 900; font-size: clamp(1.6rem, 5vw, 2.2rem); line-height: 1.1; }
+.thanks .stamp { animation: pop .6s var(--ease); }
+.copybox { width: 100%; font: 500 .92rem/1.45 var(--f-body); color: var(--navy); background: #fff; border: 2px solid var(--navy); border-radius: .7rem; padding: .7em .9em; resize: vertical; }
+
+/* ---------- footer / contacts ---------- */
+.foot { background: var(--navy-deep); color: var(--cream); padding-block: clamp(2.6rem, 6vw, 4rem) 2rem; }
+.foot-grid { display: grid; gap: 2rem; }
+@media (min-width: 800px) { .foot-grid { grid-template-columns: 1.1fr 1fr 1fr; } }
+.foot h2 { font-size: 1.6rem; color: var(--lime); }
+.foot h3 { font-size: 1rem; color: var(--pink); margin-bottom: .6rem; }
+.foot p, .foot li { color: var(--soft-on-dark); }
+.foot a { color: var(--cream); }
+.foot ul { display: flex; flex-direction: column; gap: .35rem; }
+.copyline { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.copy { font: 600 .88rem var(--f-body); background: transparent; color: var(--cream); border: 2px solid rgba(255, 244, 223, .5); border-radius: 999px; padding: .35em .9em; cursor: pointer; }
+.copy:hover { border-color: var(--lime); color: var(--lime); }
+.fine { margin-top: 2.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255, 244, 223, .18); font-size: .88rem; color: var(--soft-on-dark); }
+
+/* ---------- ticket (запись, в первом экране) ---------- */
+.ticket { position: relative; display: grid; grid-template-columns: 1fr; width: 100%; max-width: 30rem; color: var(--navy); background: var(--lime); border: 3px solid var(--navy); border-radius: 1.4rem; box-shadow: 8px 8px 0 var(--pink); overflow: hidden; animation: tilt 7s ease-in-out infinite; }
+@keyframes tilt { 0%, 100% { rotate: -.6deg; } 50% { rotate: .6deg; } }
+.ticket-main { padding: 1.3rem 1.5rem; display: flex; flex-direction: column; gap: .5rem; align-items: flex-start; min-width: 0; }
+.ticket-main p { font-weight: 600; }
+.ticket-main .ticket-h { font-family: var(--f-display); font-weight: 800; font-size: clamp(1.4rem, 4.6vw, 2rem); line-height: 1.1; letter-spacing: -.02em; }
+.ticket-cta { position: relative; padding: 1.2rem 1.5rem; background: var(--pink); border-top: 3px dashed var(--navy); }
+.ticket-cta .btn { width: 100%; }
+.ticket-cta::before, .ticket-cta::after { content: ""; position: absolute; top: -16px; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); border: 3px solid var(--navy); }
+.ticket-cta::before { left: -16px; }
+.ticket-cta::after { right: -16px; }
+.pulse { animation: ring 2.4s ease-out infinite; }
+@keyframes ring { 0% { box-shadow: 5px 5px 0 var(--lime), 0 0 0 0 rgba(36, 43, 73, .35); } 70%, 100% { box-shadow: 5px 5px 0 var(--lime), 0 0 0 16px rgba(36, 43, 73, 0); } }
+
+/* ---------- video reel ---------- */
+.reel-row { display: flex; gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 1rem 14px 2.4rem; margin-inline: -14px; scrollbar-width: none; }
+.reel-row::-webkit-scrollbar { display: none; }
+.phone { flex: 0 0 min(66vw, 300px); scroll-snap-align: center; position: relative; margin: 0; animation: drift 6s ease-in-out infinite; }
+.phone.p2 { animation-delay: -2s; }
+.phone.p3 { animation-delay: -4s; }
+@keyframes drift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@media (min-width: 900px) {
+  .reel-row { overflow: visible; justify-content: center; gap: 2.6rem; padding-top: 1.6rem; }
+  .phone { flex: 0 1 300px; }
+  .phone.p2 { margin-top: 3.4rem; }
+}
+.screen { position: relative; aspect-ratio: 9 / 16; border-radius: 2rem; overflow: hidden; border: 6px solid var(--navy); background: var(--navy); transition: transform .5s var(--ease); }
+.p1 .screen { transform: rotate(-2.5deg); box-shadow: 10px 10px 0 var(--pink); }
+.p2 .screen { transform: rotate(1.8deg); box-shadow: 10px 10px 0 var(--cream); }
+.p3 .screen { transform: rotate(-1.2deg); box-shadow: 10px 10px 0 var(--navy-2); }
+.phone:hover .screen { transform: rotate(0) scale(1.03); }
+.screen video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vbtn { position: absolute; inset: 0; width: 100%; background: transparent; border: 0; cursor: pointer; }
+.vbtn:focus-visible { outline: 4px solid var(--pink); outline-offset: -8px; }
+.screen.paused .vbtn::after { content: "\25B6\FE0E"; position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; background: var(--lime); color: var(--navy); border: 3px solid var(--navy); display: grid; place-items: center; font-size: 1.4rem; padding-left: 4px; }
+.bar { position: absolute; left: 0; bottom: 0; height: 6px; width: 0; background: var(--lime); pointer-events: none; }
+.sticker { position: absolute; left: .8rem; bottom: 1.2rem; font-family: var(--f-display); font-weight: 900; font-size: 1.05rem; background: var(--cream); color: var(--navy); padding: .4em .9em; border-radius: 999px; border: 3px solid var(--navy); rotate: -5deg; pointer-events: none; animation: wob 5s ease-in-out infinite; }
+.p2 .sticker { left: auto; right: .8rem; background: var(--pink); rotate: 4deg; }
+.p3 .sticker { background: var(--navy); color: var(--cream); border-color: var(--cream); }
+
+@media (max-width: 480px) {
+  .top .btn.small { padding: .6em 1em; font-size: .88rem; }
+  .logo { font-size: 1rem; }
+  .fcard .ph { height: 190px; }
+  .spin { width: 92px; height: 92px; left: -.6rem; }
+  .talker .bubble { font-size: .74rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .rv:not(.in) { transform: none; }
+}
+</style>
+
+</head>
+<body>
+<header class="top on-dark">
+  <div class="wrap">
+    <a class="logo" href="#top">SPEAK UP!</a>
+    <nav class="nav" aria-label="Разделы сайта">
+      <a href="#about">О клубе</a>
+      <a href="#topics">Темы встреч</a>
+      <a href="#test">Мини-тест</a>
+      <a href="#team">Команда</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. Первый экран -->
+  <section class="hero on-dark" aria-labelledby="mega">
+    <div class="wrap">
+      <span class="tag">English speaking club · ПГНИУ</span>
+      <h1 class="mega" id="mega" aria-label="SPEAK UP!"><span aria-hidden="true" style="--i:0">S</span><span aria-hidden="true" style="--i:1">P</span><span aria-hidden="true" style="--i:2">E</span><span aria-hidden="true" style="--i:3">A</span><span aria-hidden="true" style="--i:4">K</span><span aria-hidden="true" class="sp" style="--i:5">&nbsp;</span><span aria-hidden="true" style="--i:6">U</span><span aria-hidden="true" style="--i:7">P</span><span aria-hidden="true" style="--i:8">!</span></h1>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="lead">Твой английский выходит за рамки учебников.</p>
+          <p class="sub">Общайся, играй, знакомься и практикуй английский в неформальной обстановке вместе с другими студентами ПГНИУ.</p>
+          <div class="ticket">
+            <div class="ticket-main">
+              <span class="tag navy">Первая встреча</span>
+              <p class="ticket-h">30 января 2027 · 16:30</p>
+              <p>Читальный зал, 8 корпус ПГНИУ</p>
+            </div>
+            <div class="ticket-cta">
+              <a class="btn on-cream pulse" href="#join">Записаться на встречу</a>
+            </div>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <div class="frame">
+            <img src="img/talk.jpg" alt="Студенты сидят за столом в кафе, обсуждают что-то и делают заметки" width="960" height="1280" fetchpriority="high">
+          </div>
+          <span class="bubble b1">Hi! Let's talk!</span>
+          <span class="bubble b2">I'm down!</span>
+          <div class="spin" aria-hidden="true">
+            <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
+              <circle cx="60" cy="60" r="58" fill="#242B49"/>
+              <text font-family="Unbounded, Arial Black, sans-serif" font-weight="800" font-size="12.5" fill="#FFF4DF" letter-spacing="2.2"><textPath href="#circ">SPEAK • PLAY • CONNECT • </textPath></text>
+            </svg>
+            <div class="disc">!</div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="marq" aria-hidden="true">
+    <div class="marq-track">
+      <div class="marq-group">SPEAK <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg> PLAY <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg> CONNECT <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg> SPEAK <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg> PLAY <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg> CONNECT <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></div>
+      <div class="marq-group">SPEAK <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg> PLAY <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg> CONNECT <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg> SPEAK <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg> PLAY <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg> CONNECT <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></div>
+    </div>
+  </div>
+
+  <!-- 2. О клубе -->
+  <section class="band" id="about" aria-labelledby="about-h">
+    <div class="wrap about-grid">
+      <div class="about-text rv">
+        <span class="tag pink">About the club</span>
+        <h2 id="about-h">Английский не заканчивается на парах.</h2>
+        <p>Знаешь грамматику, понимаешь тексты, можешь выполнить упражнения, но иногда теряешься, когда нужно заговорить? Самое время это изменить!</p>
+        <p><b>SPEAK UP!</b> — разговорный клуб английского языка для студентов ПГНИУ. Здесь можно практиковать устную речь, обсуждать интересные темы, играть в настольные игры и общаться с другими студентами на английском.</p>
+        <p>Никаких скучных упражнений из учебников — только живое общение, интерактивные задания и возможность постепенно преодолевать языковой барьер.</p>
+        <p class="punch">Не обязательно говорить идеально. Главное — начать!</p>
+      </div>
+      <div class="scene rv" aria-hidden="true">
+        <div class="words">
+          <div class="word w1">SPEAK</div>
+          <div class="word w2">PLAY</div>
+          <div class="word w3">CONNECT</div>
+        </div>
+        <div class="talkers">
+          <div class="talker">
+            <span class="bubble">Hello!</span>
+            <svg viewBox="0 0 120 130"><path d="M10 130c0-28 22-44 50-44s50 16 50 44z" fill="#FFB8C9"/><circle cx="60" cy="52" r="30" fill="#FFF4DF" stroke="#242B49" stroke-width="4"/><path d="M30 50c0-22 14-32 32-32s30 12 28 32c-8-10-18-14-30-14S38 40 30 50z" fill="#242B49"/><circle cx="49" cy="57" r="3.2" fill="#242B49"/><circle cx="71" cy="57" r="3.2" fill="#242B49"/><path d="M48 69q12 11 24 0" stroke="#242B49" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <div class="talker">
+            <span class="bubble"><span class="dots"><i></i><i></i><i></i></span></span>
+            <svg viewBox="0 0 120 130"><path d="M10 130c0-28 22-44 50-44s50 16 50 44z" fill="#B8ED65"/><circle cx="60" cy="52" r="30" fill="#FFF4DF" stroke="#242B49" stroke-width="4"/><path d="M28 56c-4-26 12-40 34-40 20 0 32 14 28 40-2-12-10-20-18-22-12 4-30 4-44 22z" fill="#242B49"/><circle cx="49" cy="58" r="3.2" fill="#242B49"/><circle cx="71" cy="58" r="3.2" fill="#242B49"/><path d="M50 70q10 8 20 0" stroke="#242B49" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <div class="talker">
+            <span class="bubble">Nice to meet you!</span>
+            <svg viewBox="0 0 120 130"><path d="M10 130c0-28 22-44 50-44s50 16 50 44z" fill="#242B49"/><circle cx="60" cy="52" r="30" fill="#FFF4DF" stroke="#242B49" stroke-width="4"/><path d="M32 46c4-16 16-24 30-24s26 8 28 24c-10-6-20-8-30-8s-18 2-28 8z" fill="#FFB8C9" stroke="#242B49" stroke-width="3"/><circle cx="49" cy="57" r="3.2" fill="#242B49"/><circle cx="71" cy="57" r="3.2" fill="#242B49"/><path d="M47 68q13 13 26 0z" fill="#242B49"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Видео -->
+  <section class="band band-lime" id="moments" aria-labelledby="moments-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="tag navy">Live moments</span>
+        <h2 id="moments-h">Вот так выглядит живое общение</h2>
+        <p>Никаких парт и учебников: люди, игры и разговоры.</p>
+      </div>
+      <div class="reel-row rv">
+        <figure class="phone p1">
+          <div class="screen paused">
+            <video muted loop playsinline preload="metadata" poster="vid/v1.jpg" width="540" height="960" aria-label="Студенты сидят кружком на траве и разговаривают"><source src="vid/v1.mp4" type="video/mp4"></video>
+            <button class="vbtn" type="button" aria-label="Воспроизвести видео"></button>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="sticker" aria-hidden="true">SPEAK</span>
+          </div>
+        </figure>
+        <figure class="phone p2">
+          <div class="screen paused">
+            <video muted loop playsinline preload="metadata" poster="vid/v2.jpg" width="540" height="960" aria-label="Двое студентов смеются на траве"><source src="vid/v2.mp4" type="video/mp4"></video>
+            <button class="vbtn" type="button" aria-label="Воспроизвести видео"></button>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="sticker" aria-hidden="true">PLAY</span>
+          </div>
+        </figure>
+        <figure class="phone p3">
+          <div class="screen paused">
+            <video muted loop playsinline preload="metadata" poster="vid/v3.jpg" width="540" height="960" aria-label="Студенты склонились над листком и телефоном"><source src="vid/v3.mp4" type="video/mp4"></video>
+            <button class="vbtn" type="button" aria-label="Воспроизвести видео"></button>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="sticker" aria-hidden="true">CONNECT</span>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Что ждёт на встречах -->
+  <section class="band band-cream2" id="what" aria-labelledby="what-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="tag">What we do</span>
+        <h2 id="what-h">Здесь английский становится частью игры!</h2>
+        <p>На встречах мы будем использовать разные форматы, которые помогут практиковать язык и не бояться говорить.</p>
+      </div>
+      <div class="cards4 rv">
+        <article class="fcard c-pink">
+          <div class="ph"><img src="img/games.jpg" alt="Полки с настольными играми на английском языке" loading="lazy" width="665" height="1182"></div>
+          <div class="body">
+            <h3>Board Games</h3>
+            <p>Настольные игры на английском языке. Учимся общаться, объяснять правила, принимать решения и взаимодействовать с другими участниками.</p>
+          </div>
+        </article>
+        <article class="fcard c-lime">
+          <div class="body">
+            <span class="big" aria-hidden="true">Talk</span>
+            <h3>Topic Talks</h3>
+            <p>Обсуждаем разные темы, делимся мнениями и учимся выражать свои мысли на английском.</p>
+          </div>
+        </article>
+        <article class="fcard c-cream">
+          <div class="body">
+            <span class="big" aria-hidden="true">Do</span>
+            <h3>Interactive Activities</h3>
+            <p>Разговорные задания, командные игры и небольшие челленджи, которые помогают расширять словарный запас.</p>
+          </div>
+        </article>
+        <article class="fcard c-navy on-dark">
+          <div class="body">
+            <span class="big" aria-hidden="true">Chat</span>
+            <h3>Free Speaking</h3>
+            <p>Свободное общение на английском, знакомство с новыми людьми и практика речи в комфортной обстановке.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Темы встреч -->
+  <section class="band band-navy on-dark" id="topics" aria-labelledby="topics-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="tag pink">Meeting topics</span>
+        <h2 id="topics-h">У каждой встречи своя тема</h2>
+        <p class="muted">Вот о чём мы будем говорить, во что играть и что смотреть.</p>
+      </div>
+      <div class="topics rv">
+        <article class="topic">
+          <div class="body">
+            <h3 class="theme"><small>Тема</small>Celebrating Life</h3>
+            <p>Празднуем Diwali, Dia de los Muertos и Hanami, не выходя из аудитории, обсуждаем красоту жизни и придумываем маленький праздник на каждый день.</p>
+          </div>
+        </article>
+        <article class="topic">
+          <div class="ph cinema"><img src="img/cinema.jpg" alt="Зрители смотрят фильм на проекторе в тёмном уютном зале" loading="lazy" width="720" height="1280"></div>
+          <div class="body">
+            <h3 class="theme"><small>Тема</small>Being Kind</h3>
+            <p><b>Киноклуб:</b> смотрим и обсуждаем отрывки фильмов про добрые дела, играем в мемы и придумываем, какие поступки могут изменить мир к лучшему.</p>
+          </div>
+        </article>
+        <article class="topic">
+          <div class="ph lib"><img src="img/library.jpg" alt="Студенты читают книги за столиком у больших книжных шкафов" loading="lazy" width="960" height="1280"></div>
+          <div class="body">
+            <h3 class="theme"><small>Тема</small>Hygge</h3>
+            <p>Говорим об уюте, комфорте и о том, что их создаёт, проектируем идеальный дом для себя и играем в Taboo.</p>
+          </div>
+        </article>
+        <article class="topic">
+          <div class="body">
+            <h3 class="theme"><small>Тема</small>Full Cart</h3>
+            <p>Готовимся к ужину Дня Благодарения: обсуждаем традиционные рецепты, играем в «Кастрюльку» с ингредиентами и выражаем благодарность за всё, что есть в нашей жизни.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Почему стоит присоединиться -->
+  <section class="band" id="why" aria-labelledby="why-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="tag">Why Speak Up?</span>
+        <h2 id="why-h">Больше, чем просто практика английского.</h2>
+      </div>
+      <ul class="why rv">
+        <li><span class="note" aria-hidden="true">no fear</span><h3>Преодоление языкового барьера</h3><p>Постепенно привыкай говорить и не бойся ошибаться.</p></li>
+        <li><span class="note" aria-hidden="true">new friends</span><h3>Новые знакомства</h3><p>Общайся со студентами разных направлений.</p></li>
+        <li><span class="note" aria-hidden="true">new words</span><h3>Развитие навыков</h3><p>Расширяй словарный запас и тренируй восприятие речи.</p></li>
+        <li><span class="note" aria-hidden="true">just play</span><h3>Неформальное обучение</h3><p>Практикуй английский через игры и общение.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6. Для кого -->
+  <section class="band band-lime" id="who" aria-labelledby="who-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="tag navy">Who is it for?</span>
+        <h2 id="who-h">Студент ПГНИУ? Значит, тебе к нам!</h2>
+        <p>Неважно, на каком факультете ты учишься и сколько лет изучаешь английский. Разговорный клуб создан для студентов, которым хочется больше практики и живого общения.</p>
+      </div>
+      <ul class="who rv">
+        <li><span class="badge" aria-hidden="true">1–4</span><h3>Студенты 1–4 курсов</h3><p>От первокурсников до выпускников — присоединиться может каждый.</p></li>
+        <li><span class="badge" aria-hidden="true">+</span><h3>Представители разных факультетов</h3><p>Знакомься со студентами других направлений и находи новых собеседников.</p></li>
+        <li><span class="badge" aria-hidden="true">&amp;</span><h3>Иностранные студенты</h3><p>Возможность общаться с представителями разных культур и делиться опытом.</p></li>
+      </ul>
+      <div class="callout rv">
+        <p class="bubble">Не нужно быть отличником по английскому, чтобы прийти. Достаточно желания общаться и практиковаться.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. English in real life -->
+  <section class="band band-navy on-dark" id="real" aria-labelledby="real-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="tag">English in real life</span>
+        <h2 id="real-h">А ты точно знаешь, что означают эти выражения?</h2>
+        <p class="muted">Английский в интернете, переписках и повседневных разговорах немного отличается от того, что мы привыкли видеть в учебниках. Давай проверим!</p>
+      </div>
+      <div class="phrases rv">
+        <article class="phrase">
+          <h3>NO WAY!</h3>
+          <div class="chat"><span class="bubble">— I won the lottery!</span><span class="bubble pink right">— NO WAY!</span></div>
+          <button class="reveal-btn" type="button" aria-expanded="false" aria-controls="m1">Что это значит?</button>
+          <p class="meaning" id="m1" hidden>Да ладно! Не может быть!</p>
+        </article>
+        <article class="phrase">
+          <h3>I'M DOWN!</h3>
+          <div class="chat"><span class="bubble">— Wanna play a board game?</span><span class="bubble pink right">— I'm down!</span></div>
+          <button class="reveal-btn" type="button" aria-expanded="false" aria-controls="m2">Что это значит?</button>
+          <p class="meaning" id="m2" hidden>Я за! Я согласен!</p>
+        </article>
+        <article class="phrase">
+          <h3>I'M DONE!</h3>
+          <div class="chat"><span class="bubble">— Another exam tomorrow?</span><span class="bubble pink right">— I'm done!</span></div>
+          <button class="reveal-btn" type="button" aria-expanded="false" aria-controls="m3">Что это значит?</button>
+          <p class="meaning" id="m3" hidden>С меня хватит!</p>
+        </article>
+      </div>
+      <p class="after-note rv"><b>Знаешь эти выражения? А сможешь использовать их в разговоре?</b> На встречах клуба ты сможешь не просто запоминать новые слова, но и применять их в общении.</p>
+    </div>
+  </section>
+
+  <!-- 8. Мини-тест -->
+  <section class="band band-pink" id="test" aria-labelledby="test-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="tag navy">Quick quiz</span>
+        <h2 id="test-h">Let's test your English!</h2>
+        <p>Три вопроса для настроения. Тест ничего не оценивает: это просто игра, чтобы разогреться перед встречей.</p>
+      </div>
+      <form class="quiz rv" id="quiz" novalidate>
+        <fieldset class="q" data-correct="b" data-ok="Верно! Let's hang out — приглашение провести время вместе." data-bad="Правильный ответ: «Давай проведём время вместе!» Let's hang out — это приглашение пообщаться.">
+          <legend><span>1</span>Your friend says: «Let's hang out!». What does it mean?</legend>
+          <label class="opt"><input type="radio" name="q1" value="a"><i class="dot"></i>Давай поспим!<b class="mark"></b></label>
+          <label class="opt"><input type="radio" name="q1" value="b"><i class="dot"></i>Давай проведём время вместе!<b class="mark"></b></label>
+          <label class="opt"><input type="radio" name="q1" value="c"><i class="dot"></i>Давай поучимся!<b class="mark"></b></label>
+          <p class="fb" aria-live="polite"></p>
+        </fieldset>
+        <fieldset class="q" data-correct="c" data-ok="Верно! I'm broke — у меня нет денег." data-bad="Правильный ответ: «У меня нет денег». I'm broke говорят, когда на счету пусто.">
+          <legend><span>2</span>What does «I'm broke» mean?</legend>
+          <label class="opt"><input type="radio" name="q2" value="a"><i class="dot"></i>Я сломался<b class="mark"></b></label>
+          <label class="opt"><input type="radio" name="q2" value="b"><i class="dot"></i>Я очень устал<b class="mark"></b></label>
+          <label class="opt"><input type="radio" name="q2" value="c"><i class="dot"></i>У меня нет денег<b class="mark"></b></label>
+          <p class="fb" aria-live="polite"></p>
+        </fieldset>
+        <fieldset class="q" data-correct="a" data-ok="Верно! Fair enough — «ладно, справедливо»." data-bad="Правильный ответ: «Ладно, справедливо». Так отвечают, когда признают чужую правоту.">
+          <legend><span>3</span>Your friend says: «Fair enough». What do they mean?</legend>
+          <label class="opt"><input type="radio" name="q3" value="a"><i class="dot"></i>Ладно, справедливо<b class="mark"></b></label>
+          <label class="opt"><input type="radio" name="q3" value="b"><i class="dot"></i>Это нечестно<b class="mark"></b></label>
+          <label class="opt"><input type="radio" name="q3" value="c"><i class="dot"></i>Я не понимаю<b class="mark"></b></label>
+          <p class="fb" aria-live="polite"></p>
+        </fieldset>
+        <div class="quiz-actions">
+          <button class="btn on-cream" type="submit" id="quiz-check">Проверить ответы</button>
+          <button class="btn small on-cream" type="button" id="quiz-reset" hidden>Пройти ещё раз</button>
+          <span class="status" id="quiz-status" role="status"></span>
+        </div>
+        <div class="result" id="quiz-result" hidden>
+          <p class="score" id="quiz-score"></p>
+          <p id="quiz-msg"></p>
+          <p><b>А теперь представь, сколько всего интересного можно обсудить, если использовать английский не только в тестах!</b></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 9. Команда -->
+  <section class="band" id="team" aria-labelledby="team-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="tag">Meet the team</span>
+        <h2 id="team-h">Мы — студенты ПГНИУ, и мы создаём этот клуб для студентов!</h2>
+        <p>Нам хочется, чтобы английский был не только частью учебной программы, но и возможностью общаться, знакомиться и пробовать новое. Поэтому мы решили создать пространство, в котором каждый сможет практиковать язык в комфортной и дружелюбной обстановке.</p>
+      </div>
+      <ul class="team rv">
+        <li class="member"><span class="ava" aria-hidden="true">СМ</span><div><h3>Софья Мехоношина</h3><p>Факультет филологии и коммуникаций<br>Направление «Реклама и связи с общественностью»</p><span class="course">4 курс</span></div></li>
+        <li class="member"><span class="ava" aria-hidden="true">АГ</span><div><h3>Арина Гунякова</h3><p>Факультет филологии и коммуникаций<br>Направление «Реклама и связи с общественностью»</p><span class="course">4 курс</span></div></li>
+        <li class="member"><span class="ava" aria-hidden="true">ТП</span><div><h3>Татьяна Павлина</h3><p>Факультет филологии и коммуникаций<br>Направление «Реклама и связи с общественностью»</p><span class="course">4 курс</span></div></li>
+        <li class="member"><span class="ava" aria-hidden="true">МП</span><div><h3>Матвей Полин</h3><p>Географический факультет<br>Направление «Туризм»</p><span class="course">2 курс</span></div></li>
+        <li class="member"><span class="ava" aria-hidden="true">СМ</span><div><h3>Степан Морозов</h3><p>Химический факультет<br>Направление «Фармация»</p><span class="course">2 курс</span></div></li>
+        <li class="member"><span class="ava" aria-hidden="true">НК</span><div><h3>Никита Кореков</h3><p>Экономический факультет<br>Направление «Экономика»</p><span class="course">2 курс</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10. Присоединяйся -->
+  <section class="band band-navy on-dark" id="join" aria-labelledby="join-h">
+    <div class="wrap join-grid">
+      <div class="join-left rv">
+        <span class="tag">Join the club</span>
+        <h2 class="big" id="join-h">READY TO SPEAK?</h2>
+        <p class="lead">Твой английский ждёт практики!</p>
+        <p class="muted">Оставь заявку, приходи на встречу и попробуй использовать английский за пределами учебных занятий.</p>
+        <div class="meet">
+          <span>Первая встреча</span>
+          <span class="when">30 января 2027 · 16:30</span>
+          <span class="where">Читальный зал, 8 корпус ПГНИУ</span>
+        </div>
+        <div>
+          <h3 style="margin-bottom:1rem;color:var(--pink)">Как присоединиться</h3>
+          <ol class="steps">
+            <li><div><b>Оставь заявку</b><span>Заполни короткую форму рядом.</span></div></li>
+            <li><div><b>Приходи на встречу</b><span>30 января 2027 в 16:30, читальный зал 8 корпуса ПГНИУ.</span></div></li>
+            <li><div><b>Говори, играй, знакомься</b><span>Выбери формат по душе и начни говорить, даже если пока получается неидеально.</span></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="formcard rv" id="formcard">
+        <form id="signup" novalidate>
+          <div style="display:flex;flex-direction:column;gap:1.1rem">
+            <h3>Записаться на встречу</h3>
+            <div class="field"><label for="f-name">Имя и фамилия</label><input type="text" id="f-name" name="name" autocomplete="name" required maxlength="120"></div>
+            <div class="field"><label for="f-course">Курс</label>
+              <select id="f-course" name="course" required>
+                <option value="">Выбери курс</option>
+                <option>1 курс</option><option>2 курс</option><option>3 курс</option><option>4 курс</option>
+                <option>Другое</option>
+              </select></div>
+            <div class="field"><label for="f-faculty">Факультет / направление подготовки</label><input type="text" id="f-faculty" name="faculty" required maxlength="160"></div>
+            <div class="field"><label for="f-level">Уровень английского <small>(по желанию)</small></label>
+              <select id="f-level" name="level">
+                <option value="">Не хочу указывать</option>
+                <option>Начинаю (A1–A2)</option>
+                <option>Средний (B1–B2)</option>
+                <option>Продвинутый (C1–C2)</option>
+                <option>Не знаю свой уровень</option>
+              </select></div>
+            <label class="consent"><input type="checkbox" id="f-consent" required><span>Согласен(на), что организаторы клуба используют эти данные только для записи на встречу.</span></label>
+            <button class="btn on-cream" type="submit" id="signup-btn">Записаться на встречу</button>
+            <p class="formmsg" id="signup-msg" role="status"></p>
+            <p class="hint">Остались вопросы? Напиши менеджеру Софье в Telegram: <a href="https://t.me/meosof" target="_blank" rel="noopener">@meosof</a>.</p>
+          </div>
+        </form>
+        <div class="thanks" id="failed" hidden>
+          <span class="tag stamp">Almost there!</span>
+          <p class="big2">Заявка готова</p>
+          <p>Осталось отправить её менеджеру Софье: нажми кнопку, и текст заявки откроется у неё в Telegram. Или скопируй его и отправь сам. Ждём тебя <b>30 января 2027 в 16:30</b> в читальном зале 8 корпуса ПГНИУ.</p>
+          <textarea class="copybox" id="copytext" rows="6" readonly aria-label="Текст заявки"></textarea>
+          <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+            <a class="btn small on-cream" id="sendlink" href="#" target="_blank" rel="noopener" hidden>Отправить Софье в Telegram</a>
+            <button class="btn small on-cream" type="button" id="copybtn">Скопировать заявку</button>
+            <button class="btn small on-cream" type="button" id="retry">Изменить данные</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 11. Контакты -->
+<footer class="foot on-dark" id="contacts">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>SPEAK UP!</h2>
+        <p style="margin-top:.6rem">Разговорный клуб английского языка для студентов ПГНИУ. Твой английский выходит за рамки учебников.</p>
+      </div>
+      <div>
+        <h3>Где и когда</h3>
+        <ul>
+          <li>Первая встреча: <b>30 января 2027, 16:30</b></li>
+          <li>Читальный зал, 8 корпус ПГНИУ</li>
+        </ul>
+        <div class="copyline" style="margin-top:.8rem"><button class="copy" type="button" data-copy="Читальный зал, 8 корпус ПГНИУ. 30 января 2027, 16:30">Скопировать адрес</button><span class="muted" data-copied hidden>Скопировано</span></div>
+      </div>
+      <div>
+        <h3>Как с нами связаться</h3>
+        <ul id="contact-list">
+        </ul>
+      </div>
+    </div>
+    <p class="fine">Это учебный проект. SPEAK UP! — разговорный клуб ПГНИУ, созданный студентами для студентов.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  document.documentElement.classList.add("js");
+
+  /* Контакты организаторов: впиши значения, и они появятся в подвале.
+     telegram: "@ник" или "ник"; vk: "https://vk.com/..."; email: "почта"; phone: "телефон" */
+  var CONTACTS = { telegram: "meosof", vk: "", email: "", phone: "" };
+
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ---- reveal on scroll ---- */
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    $$(".rv").forEach(function (el) { io.observe(el); });
+  } else { $$(".rv").forEach(function (el) { el.classList.add("in"); }); }
+
+  /* ---- contacts ---- */
+  (function () {
+    var ul = $("#contact-list"), items = [];
+    function li(label, node) { var l = document.createElement("li"); l.appendChild(document.createTextNode(label + ": ")); l.appendChild(node); items.push(l); }
+    function link(href, text) { var a = document.createElement("a"); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.textContent = text; return a; }
+    function txt(t) { var b = document.createElement("b"); b.textContent = t; return b; }
+    if (CONTACTS.telegram) { var h = CONTACTS.telegram.replace(/^@/, "").replace(/^https?:\/\/t\.me\//, ""); li("Менеджер Софья, Telegram", link("https://t.me/" + h, "@" + h)); }
+    if (CONTACTS.vk && /^https:\/\//.test(CONTACTS.vk)) li("ВКонтакте", link(CONTACTS.vk, CONTACTS.vk.replace(/^https:\/\//, "")));
+    if (CONTACTS.email) li("Почта", txt(CONTACTS.email));
+    if (CONTACTS.phone) li("Телефон", txt(CONTACTS.phone));
+    items.forEach(function (n) { ul.appendChild(n); });
+  })();
+
+  /* ---- copy helpers ---- */
+  function copy(text, done) {
+    function fallback() {
+      var t = document.createElement("textarea"); t.value = text; t.setAttribute("readonly", ""); t.style.position = "fixed"; t.style.opacity = "0";
+      document.body.appendChild(t); t.select(); try { document.execCommand("copy"); } catch (e) {} document.body.removeChild(t); done();
+    }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  }
+  $$(".copy").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var note = b.parentNode.querySelector("[data-copied]");
+      copy(b.getAttribute("data-copy"), function () { if (note) { note.hidden = false; setTimeout(function () { note.hidden = true; }, 2000); } });
+    });
+  });
+
+  /* ---- phrase cards ---- */
+  $$(".reveal-btn").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var m = document.getElementById(b.getAttribute("aria-controls")), open = m.hidden;
+      m.hidden = !open; b.setAttribute("aria-expanded", String(open)); b.textContent = open ? "Скрыть перевод" : "Что это значит?";
+    });
+  });
+
+  /* ---- quiz ---- */
+  var quiz = $("#quiz"), qStatus = $("#quiz-status"), qRes = $("#quiz-result"), qBtn = $("#quiz-check"), qReset = $("#quiz-reset");
+  quiz.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var sets = $$(".q", quiz), score = 0, missing = 0;
+    sets.forEach(function (fs) { if (!fs.querySelector("input:checked")) missing++; });
+    if (missing) { qStatus.textContent = "Ответь на все три вопроса, и мы проверим."; return; }
+    qStatus.textContent = "";
+    sets.forEach(function (fs) {
+      var correct = fs.getAttribute("data-correct"), chosen = fs.querySelector("input:checked").value, fb = $(".fb", fs);
+      $$(".opt", fs).forEach(function (o) {
+        var v = o.querySelector("input").value, mk = $(".mark", o);
+        o.classList.remove("ok", "bad"); mk.textContent = "";
+        if (v === correct) { o.classList.add("ok"); mk.textContent = "верно"; }
+        else if (v === chosen) { o.classList.add("bad"); mk.textContent = "не то"; }
+        o.querySelector("input").disabled = true;
+      });
+      if (chosen === correct) { score++; fb.textContent = fs.getAttribute("data-ok"); } else { fb.textContent = fs.getAttribute("data-bad"); }
+    });
+    $("#quiz-score").textContent = "Правильных ответов: " + score + " из 3";
+    $("#quiz-msg").textContent = score === 3 ? "Отлично! Ты уже понимаешь живой английский." : score > 0 ? "Хороший старт! Остальное легко подтянуть в разговоре." : "Это нормально: клуб как раз для того, чтобы такие фразы стали привычными.";
+    qRes.hidden = false; qBtn.hidden = true; qReset.hidden = false;
+  });
+  qReset.addEventListener("click", function () {
+    $$(".q", quiz).forEach(function (fs) {
+      $$(".opt", fs).forEach(function (o) { o.classList.remove("ok", "bad"); $(".mark", o).textContent = ""; var i = o.querySelector("input"); i.disabled = false; i.checked = false; });
+      $(".fb", fs).textContent = "";
+    });
+    qRes.hidden = true; qBtn.hidden = false; qReset.hidden = true; qStatus.textContent = "";
+  });
+
+  /* ---- video reel: играет, пока видно на экране; клик ставит на паузу ---- */
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function tryPlay(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    $$(".screen").forEach(function (sc) {
+      var v = $("video", sc), btn = $(".vbtn", sc), bar = $(".bar", sc);
+      v.muted = true;
+      function state() { sc.classList.toggle("paused", v.paused); btn.setAttribute("aria-label", v.paused ? "Воспроизвести видео" : "Поставить видео на паузу"); }
+      v.addEventListener("play", state); v.addEventListener("pause", state);
+      v.addEventListener("timeupdate", function () { if (v.duration) bar.style.width = (v.currentTime / v.duration * 100) + "%"; });
+      btn.addEventListener("click", function () {
+        if (v.paused) { v.dataset.manual = "1"; tryPlay(v); } else { v.dataset.manual = "0"; v.pause(); }
+      });
+      state();
+    });
+    if (!reduce && "IntersectionObserver" in window) {
+      var vo = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          var v = e.target;
+          if (e.isIntersecting) { if (v.dataset.manual !== "0") tryPlay(v); } else { v.pause(); }
+        });
+      }, { threshold: 0.5 });
+      $$(".screen video").forEach(function (v) { vo.observe(v); });
+    }
+  })();
+
+  /* ---- signup form: собирает заявку, дальше её отправляют организаторам по контактам ---- */
+  var TG = (CONTACTS.telegram || "").replace(/^@/, "").replace(/^https?:\/\/t\.me\//, "");
+  var form = $("#signup"), msg = $("#signup-msg"), ready = $("#failed");
+  function show(which) { form.hidden = which !== "form"; ready.hidden = which !== "ready"; }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    msg.textContent = "";
+    if (!form.checkValidity()) { form.reportValidity(); msg.textContent = "Заполни обязательные поля и поставь галочку согласия."; return; }
+    var text = "Заявка на встречу SPEAK UP! (30 января 2027, 16:30)\nИмя и фамилия: " + $("#f-name").value.trim() +
+      "\nКурс: " + $("#f-course").value + "\nФакультет / направление: " + $("#f-faculty").value.trim() +
+      "\nУровень английского: " + ($("#f-level").value || "не указан");
+    $("#copytext").value = text;
+    var send = $("#sendlink");
+    if (TG) { send.href = "https://t.me/" + TG + "?text=" + encodeURIComponent(text); send.hidden = false; } else { send.hidden = true; }
+    show("ready");
+  });
+  $("#retry").addEventListener("click", function () { show("form"); $("#f-name").focus(); });
+  $("#copybtn").addEventListener("click", function () {
+    var b = this; copy($("#copytext").value, function () { b.textContent = "Скопировано"; setTimeout(function () { b.textContent = "Скопировать заявку"; }, 2000); });
+  });
+})();
+</script>
+</body>
+</html>
